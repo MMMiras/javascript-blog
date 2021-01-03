@@ -13,7 +13,9 @@
 'use strict';
 
 function titleClickHandler(event){
+    event.preventDefault();
     const clickedElement = this;
+  
   console.log('Link was clicked!');
   console.log(event);
   /*[DONE] remove class 'active' from all article links  */
@@ -26,6 +28,11 @@ function titleClickHandler(event){
   console.log('clickedElement:', clickedElement);
 
     clickedElement.classList.add('active');
+
+// !!!!!!!!!!!!!!Dlaczego to działa, przecież to nawet nie jest funkcja?? :O !!!!!!!!!!
+
+
+
   /* [DONE] remove class 'active' from all articles */
  const activeArticles = document.querySelectorAll('.posts .active')
 
