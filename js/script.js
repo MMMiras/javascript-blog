@@ -65,3 +65,80 @@ for(let link of links){
 }
 
 // dlaczego to zostało wrzucone poza nawias? W ćwiczeniu nie działa bo jest poza nawiasem.
+
+
+
+
+
+
+
+
+
+//Część druga
+
+
+
+
+
+
+
+const optArticleSelector = '.post',
+  optTitleSelector = '.post-title',
+  optTitleListSelector = '.titles';
+
+function generateTitleLinks(){
+
+  /* remove contents of titleList */
+const titleList = document.querySelector (optTitleListSelector)
+
+function clearMessages(){
+	document.getElementById('messages').innerHTML = 'titleList';
+}
+console.log(titleList)
+
+// document.getElementById('.list .titles').innerHTML = titleList;
+// W sumie nie wiem czy działa czy nie, co znaczy wyczyścić zawartość linków?
+
+  /* for each article */
+ const articles = document.querySelectorAll (optArticleSelector)
+let html = '';
+for(let article for articles){
+ 
+
+// Podobną operację wykonywaliśmy już kilka razy, więc możesz wzorować się na kodzie stworzonym w poprzednim submodule. Zadeklaruj nową stałą articles i zapisz do niej odniesienie do wszystkich elementów pasujących do selektora zapisanego w stałej optArticleSelector.
+
+//Następnie wykorzystaj pętlę for-of do wykonania pozostałych operacji z osobna dla każdego z artykułów. W dalszej części submodułu założymy, że w deklaracji pętli pojedynczy artykuł został nazwany article.
+
+
+// jakich operacji!
+
+//to ma byc funkcja i nawias ma się konczyc za
+
+
+    /* get the article id */
+
+    const articleId = clickedElement.getAttribute('id');
+  console.log(articleId);
+
+    /* find the title element */
+
+    const articleTitle = article.querySelector(optTitleSelector).innerHTML;
+
+    /* get the title from the title element */
+      /// Jaką mam stworzyć stałą? const =article.getAttribute(articleTitle)
+    /* create HTML of the link */
+    const linkHTML = '<li><a href="#' + articleId + '"><span>' + articleTitle + '</span></a></li>';
+    console.log(linkHTML)
+    /* insert link into titleList */
+
+    titleList.innerHTML = titleList.innerHTML + linkHTML;
+
+    // var d1 = document.getElementById('one');
+    // d1.insertAdjacentHTML('afterend', '<div id="two">two</div>');
+    //Nie wiem jak użyć.
+  }
+    titleList.innerHTML = html;
+}
+
+generateTitleLinks();
+console.log(html)
